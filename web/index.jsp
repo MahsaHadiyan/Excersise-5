@@ -1,4 +1,4 @@
-<%--
+<%@ page import="controller.SessionMonitor" %><%--
   Created by IntelliJ IDEA.
   User: Hadian
   Date: 3/5/2023
@@ -11,6 +11,15 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <%=SessionMonitor.getONLINE()%>
+  <BR/>
+  <%=SessionMonitor.getVISIT()%>
+  <br/>
+  <form action="/main.do">
+    <input type="text" name="name"/>
+    <input type="text" name="family"/>
+    <input type="submit"/>
+  </form>
+
   </body>
 </html>
